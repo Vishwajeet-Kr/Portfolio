@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+#about img {
+    width: 200px;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#projects .project {
+    margin-bottom: 20px;
+}
+
+#projects img {
+    width :"600px";
+    height:"500px";
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
