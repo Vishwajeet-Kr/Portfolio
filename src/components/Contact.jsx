@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, Github, Linkedin, Twitter, Send } from 'lucide-react';
+import { Mail, Github, Linkedin, Send } from 'lucide-react';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -16,7 +16,19 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    const { name, email, message } = formData;
+    
+    if (!name || !email || !message) {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    const subject = `Portfolio Contact - Message from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailtoLink = `mailto:bishwjit8890@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoLink;
+    setFormData({ name: '', email: '', message: '' });
   };
 
   const containerVariants = {
