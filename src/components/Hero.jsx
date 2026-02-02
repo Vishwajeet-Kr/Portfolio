@@ -127,8 +127,8 @@ const Hero = () => {
           </motion.button>
 
           <motion.a
-            href="/Vishwajeet_0126.pdf" 
-            download="Vishwajeet_Resume.pdf"
+            href="/Vishwajeet_02.pdf"
+            download="Vishwajeet_02.pdf"
             className="px-8 py-4 bg-gradient-to-r from-cyber-cyan to-soft-violet text-white font-semibold rounded-lg shadow-lg neon-border"
             whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(0, 245, 255, 0.8)' }}
             whileTap={{ scale: 0.95 }}
